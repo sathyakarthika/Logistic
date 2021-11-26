@@ -11,7 +11,8 @@ namespace Data
 {
     public class ADOData
     {
-        string constr = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
+        string constr = ConfigurationManager.ConnectionStrings["MyConnectionString"].ToString();
+        //string constr = @"Data Source=.\SQLEXPRESS; AttachDbFilename=|DataDirectory|\Logistic.mdf; Integrated Security=True; Connect Timeout=30; User Instance=True";
         private SqlConnection con;
         private SqlCommand com;
         public int ExecuteNonQuery(string SpName, SqlParameter[] sqlParameters)
